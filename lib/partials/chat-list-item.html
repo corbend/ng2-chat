@@ -1,0 +1,8 @@
+<div class="chat-item">
+	<h2>{{chat.name}}</h2>
+	<span>{{chat.description}}</span>
+	<div class="toolbar">
+		<button *ngIf="!isJoined(chat)" (click)="joinChat(event)">Join</button>
+		<button *ngIf="isJoined(chat)" (click)="leaveChat(event)">Leave</button>
+	</div>
+</div>

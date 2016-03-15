@@ -1,0 +1,19 @@
+<div class="panel">
+	<div class="toolbar">
+		<label>Show Filter</label>
+		<input type="checkbox" [(ngModel)]="filter.showMe">
+		<label>Search by</label>
+		<select>
+			<option *ngFor="#searchParam in searchParams">{{searchParam}}</option>
+		</select>
+		<label>Phrase</label>
+		<input type="text" [(ngModel)]="filter.search">
+	</div>
+</div>
+<div class="chat-list">	
+	<ul>
+		<li *ngFor="#chat of chats">
+			<chat-list-item [chat]=chat></chat-list-item>
+		</li>
+	</ul>
+</div>

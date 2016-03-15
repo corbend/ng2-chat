@@ -1,7 +1,10 @@
 import {Component} from 'angular2/core';
+import {ChatListItem} from './list-item';
 
 @Component({
-	selector: 'chat-list'
+	templateUrl: '/partials/chat-list.html'
+	selector: 'chat-list',
+	directives: [ChatListItem]
 })
 class ChatList {
 	constructor() {}
